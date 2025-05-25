@@ -1,4 +1,4 @@
-*comment Himbeereule 2023
+*comment Himbeereule 2023 | Bugfix 25.05.2025
 *label number_reading_function_1
 *comment number_count_1 is internal and measures the length of the required number, number_count_1b stores the actual input number
 
@@ -1004,5 +1004,18 @@
     *if (	(number_count_1 = 9) 	and	((((	(((number_count_1_1 != 0) and (number_count_1_2 != 0)) 	and	((number_count_1_3!= 0) and (number_count_1_4 != 0))) 	and	((number_count_1_5 != 0) and (number_count_1_6 != 0)) 	)	and ((number_count_1_7 != 0) and (number_count_1_8 != 0))	)	and	 (number_count_1_9 != 0)	)	and (((not (number_count_composite_ones_tens_done)) and (not (number_count_composite_ten_thousands_thousands_done))) and (not (number_count_composite_ten_millions_millions_done)))		)	)
         *set number_count_1_result_total "${number_count_1_result_0} hundred ${number_count_1_result_1}-${number_count_1_result_2} million ${number_count_1_result_3} hundred ${number_count_1_result_4}-${number_count_1_result_5} thousand ${number_count_1_result_6} hundred and ${number_count_1_result_7}-${number_count_1_result_8}"
 
+   *comment reset initial values
+    *set number_count_1_1 0
+    *set number_count_1_2 0
+    *set number_count_1_3 0
+    *set number_count_1_4 0
+    *set number_count_1_5 0
+    *set number_count_1_6 0
+    *set number_count_1_7 0
+    *set number_count_1_8 0
+    *set number_count_1_9 0
+    *set number_count_composite_ones_tens_done false
+    *set number_count_composite_ten_thousands_thousands_done false
+    *set number_count_composite_ten_millions_millions_done false
     *return
 *return
